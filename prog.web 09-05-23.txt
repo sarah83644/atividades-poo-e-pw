@@ -1,0 +1,16 @@
+Programação WEB - 09/05/2023
+Inserir e remover elementos da lista
+
+list.push ('g') - insere um elemento no final da lista
+list.pop ( ) - remove um elemento no final da lista
+list.shift ( ) - remove o primeiro elemento da lista
+list.vnshift ('a') - insere elemento no início da lista
+
+objetos:
+
+const produtos = {
+    nome:'camisa',
+    preço: 15.99,
+    estoque: true,
+    tamanho: ['P', 'M', 'G']
+}
