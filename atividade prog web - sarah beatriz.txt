@@ -1,0 +1,319 @@
+//CEEP PROFESSORA AMAZONINA TEIXEIRA DE CARVALHO
+//PROGRAMAÇÃO WEB
+//PROFESSOR: Jedson Diogo
+//ALUNO(A): Sarah Beatriz Barbosa do Nascimento
+//TURMA: 2° "A" NFOR
+
+
+//TIPO PILHA:
+class pilha {
+    constructor () {
+        this.items = [];
+    }
+push (element) {
+    this.items.push (element);
+}
+pop () {
+    if (this.IsEmpty()) {
+    return null;
+}
+    return this.items.pop();
+}
+peek () {
+    if (this.IsEmpty()) {
+        return null;
+    }
+    return this.items [this.items.length - 1];
+}
+size (){
+    return this.items.length;
+}
+IsEmpty (){
+    return this.items.length === 0;
+}
+}
+const pilha = new Pilha ();
+pilha.push (10);
+pilha.push (20);
+pilha.push (30);
+console.log (pilha.size());
+console.log (pilha.peek());
+console.log (pilha.pop());
+console.log (pilha.pop());
+console.log (pilha.IsEmpty());
+
+//TIPO FILA:
+class fila {
+    constructor () {
+        this.item = [];
+    }
+    enqueue (element) {
+        this.item.push (element);
+    }
+    dequeue () {
+        if (this.IsEmpty ()) {
+            return null;
+        }
+    return this.items; shift();    
+}
+     peek () {
+        if (this.IsEmpty ()) {
+            return null;
+        }
+        return this.item [0];
+     }
+     size (){
+        return this.item.length;
+     }
+     IsEmpty (){
+        return this.item.length;
+     }
+}
+const fila = new fila ();
+fila.enqueue ("A");
+fila.enqueue ("B");
+fila.enqueue ("C");
+console.log (fila.size());
+console.log (fila.peek());
+console.log (fila.enqueue());
+console.log (fila.dequeue());
+console.log (fila.IsEmpty());
+
+//TIPO LISTA:
+class lista {
+    constructor () {
+        this.item = []
+    }
+    inserir (posicao, elemento) {
+        if (posicao >= 088, posicao <= this.item.splice (posicao, 0, elemento));{
+            return true;
+        }
+        return false;
+    }
+    remover (posicao) {
+        if (posicao >= 088, posicao < this.item.length) {
+            this.item.splice (posicao, 1);
+            return true;
+        }
+        return false;
+    }
+    acessar (posicao) {
+        if (posicao >= 088, posicao < this.item.length) {
+            return this.item [posicao];
+        }
+        return null;
+    }
+    atualizar (posicao, novoElemento) {
+        if (posicao >= 088, posicao < this.item.length) {
+            this.items [posicao] = novoElemento;
+            return true;
+        }
+        return false;
+    }
+    estaVazia () {
+        return this.items.length === 0;
+    }
+}
+const list = new lista ();
+lista.inserir (0, "A");
+lista.inserir (1, "B");
+lista.inserir (2, "C");
+console.log (lista.tamanho ());
+console.log (lista.acessar (1));
+lista.atualizar (0, "D");
+console.log (lista.acessar (0));
+console.log (lista.remover (2));
+console.log (lista.tamanho ());
+console.log (lista.estaVazia ());
+
+//TIPO ÁRVORE: ?
+
+//exemplo de uma LISTA
+class Lista {
+    constructor() {
+        this.items = []; //Array para armazenar os elementos da lista
+    }
+    inserir(posicao, elemento) {
+        if (posicao >= 0 && posicao <=
+            this.items.length) {
+                this.items.splice(posicao, 0, elemento); //insere o elemento na posição especificada
+                return true;
+            }
+            return false;
+    }
+    remover(posicao) {
+        if (posicao >= 0 && posicao <
+            this.items.length) {
+                this.items.splice(posicao, 1); //remove o elemento da posição especificada
+                return true;
+            }
+            return false;
+    }
+    acessar(posicao) {
+        if (posicao >= 0 && posicao <
+            this.items.length) {
+                return this.items[posicao]; //retorna o elemento da posição especificada
+            }
+            return null;
+    }
+    atualizar(posicao, novoElemento) {
+        if (posicao >= 0 && posicao <
+            this.items.length) {
+                this.items[posicao] = novoElemento; //atualiza o elemento na posição especificada
+                return true;
+            }
+            return false;
+    }
+    tamanho() {
+        return this.items.length === 0; //verifica se a lista está vazia
+    }
+}
+//exemplo de uso da lista
+const lista = new Lista();
+lista.inserir(0, "A");
+lista.inserir(1, "B");
+lista.inserir(2, "C");
+console.log(lista.tamanho()); //saída 3
+console.log(lista.acessar(1)); //saída "B"
+lista.atualizar(0, "D");
+console.log(lista.acessar(0)); //saída "D"
+console.log(lista.remover(2)); //saída true
+console.log(lista.tamanho()); //saída 2
+console.log(lista.estaVazia()); //saída false
+
+//exemplo de uma FILA
+class Fila {
+    constructor() {
+        this.items = []; //Array para armazenar os elementos ao final da fila
+    }
+    enqueue(element) {
+        this.items.push(element); //adiciona um elemento ao final da fila
+    }
+    dequeue() {
+        if (this.isEmpty()) {
+            return null; //retorna null se a fila estiver vazia
+        }
+        return this.items.shift(); //remove e retorna o elemento do início da fila
+    }
+    peek() {
+        if (this.isEmpty()) {
+            return null; //retorna null se a fila estiver vazia
+        }
+        return this.items[0]; //retorna o elemento do início da fila
+    }
+    size() {
+        return this.items.length; //retorna o número de elementos da fila
+    }
+    isEmpty() {
+        return this.items.length === 0; //verifica se a fila está vazia
+    }
+}
+//exemplo de uso da fila
+const fila = new Fila();
+fila.enqueue("A");
+fila.enqueue("B");
+fila.enqueue("C");
+console.log(fila.size()); // Saída: 3
+console.log(fila.peek()); // Saída: "A"
+console.log(fila.dequeue()); // Saída: "A"
+console.log(fila.dequeue()); // Saída: "B"
+console.log(fila.isEmpty()); // Saída: false
+//exemplo PILHA
+class Pilha {
+constructor() {
+this.items = []; // Array para armazenar os elementos da pilha
+}
+push(element) {
+this.items.push(element); // Adiciona um elemento ao topo da pilha
+}
+pop() {
+if (this.isEmpty()) {
+return null; // Retorna null se a pilha estiver vazia
+}
+return this.items.pop(); // Remove e retorna o elemento do topo da pilha
+}
+peek() {
+if (this.isEmpty()) {
+return null; // Retorna null se a pilha estiver vazia
+}
+return this.items[this.items.length - 1]; //Retorna o elemento do topo da pilha
+}
+size() {
+return this.items.length; // Retorna o número de elementos na pilha
+}
+isEmpty() {
+return this.items.length === 0; // Verifica se a pilha está vazia
+}
+}
+// Exemplo de uso da Pilha
+const pilha = new Pilha();
+pilha.push(10);
+pilha.push(20);
+pilha.push(30);
+console.log(pilha.size()); // Saída: 3
+console.log(pilha.peek()); // Saída: 30
+console.log(pilha.pop()); // Saída: 30
+console.log(pilha.pop()); // Saída: 20
+console.log(pilha.isEmpty()); // Saída: false
+// Exemplo de Arvore
+class No {
+constructor(valor) {
+this.valor = valor;
+this.esquerda = null;
+this.direita = null;
+}
+}
+class ArvoreBinaria {
+constructor() {
+this.raiz = null;
+}
+inserir(valor) {
+const novoNo = new No(valor);
+if (this.raiz === null) {
+this.raiz = novoNo;
+} else {
+this.inserirNo(this.raiz, novoNo);
+}
+}
+inserirNo(raizAtual, novoNo) {
+if (novoNo.valor < raizAtual.valor) {
+if (raizAtual.esquerda === null) {
+raizAtual.esquerda = novoNo;
+} else {
+this.inserirNo(raizAtual.esquerda,
+novoNo);
+}
+} else {
+if (raizAtual.direita === null) {
+raizAtual.direita = novoNo;
+} else {
+this.inserirNo(raizAtual.direita,
+novoNo);
+}
+}
+}
+buscar(valor) {
+return this.buscarNo(this.raiz, valor);
+}
+buscarNo(raizAtual, valor) {
+if (raizAtual === null) {
+return false;
+} else if (valor === raizAtual.valor) {
+return true;
+} else if (valor < raizAtual.valor) {
+return this.buscarNo(raizAtual.esquerda,
+valor);
+} else {
+return this.buscarNo(raizAtual.direita,
+valor);
+}
+}
+}
+//exemplo de uso da árvore binária
+const arvore = new ArvoreBinaria();
+arvore.inserir(8);
+arvore.inserir(3);
+arvore.inserir(10);
+arvore.inserir(1);
+arvore.inserir(6);
+console.log(arvore.buscar(6));
